@@ -1,0 +1,27 @@
+{
+  "name": "console-whisperer",
+  "version": "1.0.0",
+  "description": "A browser extension that translates cryptic JavaScript console errors into plain English explanations with AI-powered fix suggestions.",
+  "scripts": {
+    "start:backend": "cd backend && npm run dev",
+    "build:extension": "node scripts/build-extension.js",
+    "test:backend": "cd backend && npm test",
+    "test:extension": "cd extension && npm test",
+    "docker:up": "docker-compose up",
+    "docker:build": "docker-compose build",
+    "docker:down": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chirag127/Console-Whisperer-Browser-Extension.git"
+  },
+  "author": "Chirag Singhal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chirag127/Console-Whisperer-Browser-Extension/issues"
+  },
+  "homepage": "https://github.com/chirag127/Console-Whisperer-Browser-Extension#readme",
+  "devDependencies": {
+    "archiver": "^5.3.1"
+  }
+}

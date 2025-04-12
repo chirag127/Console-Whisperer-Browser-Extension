@@ -1,0 +1,19 @@
+# Build artifacts
+*.zip
+*.crx
+*.pem
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+
+# Logs
+*.log
+
+# Testing
+coverage/

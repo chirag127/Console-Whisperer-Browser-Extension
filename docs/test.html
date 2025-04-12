@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Whisperer Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #f44336;
+        }
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        button:hover {
+            background-color: #d32f2f;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 12px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Console Whisperer Test Page</h1>
+    <p>This page contains buttons that generate various JavaScript errors to test the Console Whisperer extension.</p>
+    <p>Make sure you have the extension installed and the developer console open (F12) to see the errors and the extension's response.</p>
+    
+    <div class="card">
+        <h2>Reference Error</h2>
+        <p>Generates a reference error by trying to access an undefined variable.</p>
+        <pre><code>console.log(undefinedVariable);</code></pre>
+        <button onclick="generateReferenceError()">Generate Reference Error</button>
+    </div>
+    
+    <div class="card">
+        <h2>Type Error</h2>
+        <p>Generates a type error by trying to access a property of null.</p>
+        <pre><code>const obj = null;
+obj.property;</code></pre>
+        <button onclick="generateTypeError()">Generate Type Error</button>
+    </div>
+    
+    <div class="card">
+        <h2>Syntax Error</h2>
+        <p>Generates a syntax error by evaluating invalid JavaScript.</p>
+        <pre><code>eval('if (true) {');</code></pre>
+        <button onclick="generateSyntaxError()">Generate Syntax Error</button>
+    </div>
+    
+    <div class="card">
+        <h2>Range Error</h2>
+        <p>Generates a range error by creating an array with an invalid length.</p>
+        <pre><code>new Array(-1);</code></pre>
+        <button onclick="generateRangeError()">Generate Range Error</button>
+    </div>
+    
+    <div class="card">
+        <h2>URI Error</h2>
+        <p>Generates a URI error by decoding an invalid URI.</p>
+        <pre><code>decodeURIComponent('%');</code></pre>
+        <button onclick="generateURIError()">Generate URI Error</button>
+    </div>
+    
+    <div class="card">
+        <h2>Promise Rejection</h2>
+        <p>Generates an unhandled promise rejection.</p>
+        <pre><code>new Promise((resolve, reject) => {
+    reject(new Error('Promise rejected'));
+});</code></pre>
+        <button onclick="generatePromiseRejection()">Generate Promise Rejection</button>
+    </div>
+    
+    <div class="card">
+        <h2>Custom Error</h2>
+        <p>Generates a custom error using console.error().</p>
+        <pre><code>console.error('This is a custom error message');</code></pre>
+        <button onclick="generateCustomError()">Generate Custom Error</button>
+    </div>
+    
+    <script>
+        function generateReferenceError() {
+            console.log(undefinedVariable);
+        }
+        
+        function generateTypeError() {
+            const obj = null;
+            obj.property;
+        }
+        
+        function generateSyntaxError() {
+            try {
+                eval('if (true) {');
+            } catch (error) {
+                throw error;
+            }
+        }
+        
+        function generateRangeError() {
+            new Array(-1);
+        }
+        
+        function generateURIError() {
+            decodeURIComponent('%');
+        }
+        
+        function generatePromiseRejection() {
+            new Promise((resolve, reject) => {
+                reject(new Error('Promise rejected'));
+            });
+        }
+        
+        function generateCustomError() {
+            console.error('This is a custom error message');
+        }
+    </script>
+</body>
+</html>
