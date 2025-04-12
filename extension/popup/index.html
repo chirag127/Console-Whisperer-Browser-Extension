@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Whisperer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>Console Whisperer</h1>
+      <p>Translates cryptic dev console errors into plain English</p>
+    </header>
+    
+    <main class="popup-content">
+      <section class="popup-section">
+        <h2>Status</h2>
+        <div class="status-container">
+          <div class="status-indicator active" id="status-indicator"></div>
+          <div class="status-text" id="status-text">Active and monitoring for errors</div>
+        </div>
+      </section>
+      
+      <section class="popup-section">
+        <h2>Recent Errors</h2>
+        <div class="recent-errors" id="recent-errors">
+          <div class="empty-state">No recent errors detected</div>
+        </div>
+      </section>
+      
+      <section class="popup-section">
+        <h2>Settings</h2>
+        <div class="settings-container">
+          <div class="setting">
+            <label for="auto-show">
+              <input type="checkbox" id="auto-show" checked>
+              Automatically show explanations
+            </label>
+          </div>
+          
+          <div class="setting">
+            <label for="save-history">
+              <input type="checkbox" id="save-history" checked>
+              Save error history
+            </label>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="popup-footer">
+      <div class="popup-version">v1.0.0</div>
+      <a href="https://github.com/chirag127/Console-Whisperer-Browser-Extension" target="_blank" class="popup-link">GitHub</a>
+    </footer>
+  </div>
+  
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
