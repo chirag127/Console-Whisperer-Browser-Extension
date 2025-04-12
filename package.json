@@ -9,7 +9,8 @@
     "test:extension": "cd extension && npm test",
     "docker:up": "docker-compose up",
     "docker:build": "docker-compose build",
-    "docker:down": "docker-compose down"
+    "docker:down": "docker-compose down",
+    "convert-icons": "node scripts/convert-icons.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/chirag127/Console-Whisperer-Browser-Extension#readme",
   "devDependencies": {
-    "archiver": "^5.3.1"
+    "archiver": "^5.3.1",
+    "sharp": "^0.33.2"
   }
 }
