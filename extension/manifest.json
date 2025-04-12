@@ -30,15 +30,25 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content/index.js"],
-      "run_at": "document_start"
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/index.js"
+      ],
+      "run_at": "document_start",
+      "type": "module"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["assets/*", "styles/*"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "assets/*",
+        "styles/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
